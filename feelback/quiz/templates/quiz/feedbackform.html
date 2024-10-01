@@ -1,0 +1,49 @@
+{% load static %}
+{% url 'submitfeedback' as feedbackurl %}
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>FeelBack - Accueil</title>
+    <link rel="stylesheet" href="{% static 'quiz/css/form.css' %}">
+    <link rel="stylesheet" href="{% static 'global.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="{% static 'feelback/images/header.png' %}" alt="Logo FeelBack" class="header-image">
+    </header>
+
+    <main>
+        <a href="{% url 'index' %}" class="back-link">Revenir sur la page d'accueil</a>
+        <h2>Donner votre avis</h2>
+        <form action="{{ feedbackurl }}" method="post">
+            {% csrf_token %}
+            <div class="question">
+                <label>Évaluer de 1 à 5 le respect du délai de livraison</label>
+                {% for i in "12345" %}
+                <input type="radio" name="delivery_time_rating" value="{{ i }}">{{ i }}
+                {% endfor %}
+            </div>
+            <div class="question">
+                <label>Évaluer de 1 à 5 l'état de votre colis à sa réception</label>
+                {% for i in "12345" %}
+                <input type="radio" name="package_condition_rating" value="{{ i }}">{{ i }}
+                {% endfor %}
+            </div>
+            <div class="question">
+                <label>Évaluer de 1 à 5 le comportement du livreur</label>
+                {% for i in "12345" %}
+                <input type="radio" name="courier_behavior_rating" value="{{ i }}">{{ i }}
+                {% endfor %}
+            </div>
+            <button type="submit">Envoyer</button>
+        </form>
+    </main>
+
+    <footer>
+        <img src="{% static 'feelback/images/footer.png' %}" alt="Footer FeelBack">
+    </footer>
+</body>
+</html>

@@ -1,0 +1,75 @@
+body {
+    font-family: 'Rajdhani', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+header {
+    background-color: #fff;
+    padding: 10px 0; /* Réduit pour moins d'espacement autour de l'image */
+    border-bottom: 2px solid #cccccc;
+}
+
+.header-image {
+    width: 50%; /* Ajuste cela pour contrôler la taille de l'image */
+    height: auto;
+}
+
+.container {
+    background-color: white;
+    width: 60%;
+    margin: 40px auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.back-link {
+    color: #333;
+    background-color: #e0e0e0; /* Ajusté pour correspondre à l'image */
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.back-link:hover {
+    background-color: #cccccc;
+}
+
+.question {
+    margin: 20px 0;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+button, .button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.8em;
+}
