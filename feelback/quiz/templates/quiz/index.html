@@ -1,0 +1,26 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>FeelBack - Accueil</title>
+    <link rel="stylesheet" href="{% static 'quiz/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'global.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="{% static 'feelback/images/header.png' %}" alt="Logo FeelBack" class="header-image">
+    </header>
+    <main>
+        <h2>Bienvenue sur l'application FeelBack</h2>
+        <p>Cette application vous permet d'évaluer la livraison de votre commande</p>
+        <a href="{% url 'dashboard' %}" class="button">Consulter le tableau de bord</a>
+        <button onclick="location.href='{% url 'feedbackform' %}'">Créer une commande fictive et répondre au questionnaire</button>
+    </main>
+    <footer>
+        <img src="{% static 'feelback/images/footer.png' %}" alt="Footer FeelBack">
+    </footer>
+</body>
+</html>
