@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de bord - FeelBack</title>
+
+    
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'quiz/css/dashboard.css' %}">
+</head>
+<body>
+
+    <header>
+        <img src="{% static 'feelback/images/header.png' %}" alt="Logo FeelBack" class="header-image">
+    </header>
+
+    <a href="{% url 'index' %}" class="back-button">REVENIR SUR LA PAGE D'ACCUEIL</a>
+
+    <section class="dashboard">
+        <h2>Tableau de bord</h2>
+        <p>Cette page regroupe des statistiques moyennes sur l'ensemble des réponses données</p>
+        <div class="statistics">
+            <div class="stat-box">
+                <p class="stat-value">6</p>
+                <p class="stat-label">Réponses</p>
+            </div>
+            <div class="stat-box">
+                <p class="stat-value">4.37 / 5</p>
+                <p class="stat-label">Délai de livraison</p>
+            </div>
+            <div class="stat-box">
+                <p class="stat-value">4.66 / 5</p>
+                <p class="stat-label">État du colis</p>
+            </div>
+            <div class="stat-box">
+                <p class="stat-value">3.80 / 5</p>
+                <p class="stat-label">Comportement du livreur</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>2024 | FeelBack</p>
+    </footer>
+
+</body>
+</html>

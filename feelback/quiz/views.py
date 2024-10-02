@@ -7,6 +7,7 @@ def index(request):
     context = {" ": " "}
     template = loader.get_template("quiz/index.html")
     return HttpResponse(template.render(context, request))
+    
 
 def dashboard(request):
     context = {" ": " "}
