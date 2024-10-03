@@ -7,7 +7,6 @@
     <title>Tableau de bord - FeelBack</title>
     <link rel="stylesheet" href="{% static 'quiz/css/dash.css' %}">
     <link rel="stylesheet" href="{% static 'global.css' %}">
-    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -20,22 +19,17 @@
         <div class="statistics">
             <div class="stat">
                 <span class="number">{{ total_responses }}</span>
+                <br>
                 <span class="desc">Réponses</span>
             </div>
+            {% for stat in question_stats %}
             <div class="stat">
-                <span class="number">{{ avg_delivery_time|floatformat:2 }} / {{ total_responses }}</span>
-                <span class="desc">Délai de livraison</span>
+                <span class="number">{{ stat.average|floatformat:2 }} / {{ total_responses }}</span>
+                <br>
+                <span class="desc">{{ stat.title }}</span>
             </div>
-            <div class="stat">
-                <span class="number">{{ avg_package_condition|floatformat:2 }} / {{ total_responses }}</span>
-                <span class="desc">État du colis</span>
-            </div>
-            <div class="stat">
-                <span class="number">{{ avg_courier_behavior|floatformat:2 }} / {{ total_responses }}</span>
-                <span class="desc">Comportement du livreur</span>
-            </div>
+            {% endfor %}
         </div>
-        
     </main>
     <footer>
         <img src="{% static 'feelback/images/footer.png' %}" alt="Footer FeelBack">

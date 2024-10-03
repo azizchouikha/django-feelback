@@ -20,24 +20,15 @@
         <h2>Donner votre avis</h2>
         <form action="{{ feedbackurl }}" method="post">
             {% csrf_token %}
+            <!-- Boucler sur les questions récupérées de la base de données -->
+            {% for question in questions %}
             <div class="question">
-                <label>Évaluer de 1 à 5 le respect du délai de livraison</label>
+                <label>{{ question.title }}</label>
                 {% for i in "12345" %}
-                <input type="radio" name="delivery_time_rating" value="{{ i }}">{{ i }}
+                <input type="radio" name="question_{{ question.id }}" value="{{ i }}">{{ i }}
                 {% endfor %}
             </div>
-            <div class="question">
-                <label>Évaluer de 1 à 5 l'état de votre colis à sa réception</label>
-                {% for i in "12345" %}
-                <input type="radio" name="package_condition_rating" value="{{ i }}">{{ i }}
-                {% endfor %}
-            </div>
-            <div class="question">
-                <label>Évaluer de 1 à 5 le comportement du livreur</label>
-                {% for i in "12345" %}
-                <input type="radio" name="courier_behavior_rating" value="{{ i }}">{{ i }}
-                {% endfor %}
-            </div>
+            {% endfor %}
             <button type="submit">Envoyer</button>
         </form>
     </main>

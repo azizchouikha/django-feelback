@@ -17,7 +17,7 @@
         <h2>Bienvenue sur l'application FeelBack</h2>
         <p>Cette application vous permet d'évaluer la livraison de votre commande</p>
         <a href="{% url 'dashboard' %}" class="button">CONSULTER LE TABLEAU DE BORD</a>
-        <button onclick="location.href='{% url 'feedbackform' %}'">CREER UNE COMMANDE FICTIVE ET REPONDRE AU QUESTIONNAIRE</button>
+        <button onclick="location.href='{% url 'submitfeedback' %}'">CREER UNE COMMANDE FICTIVE ET REPONDRE AU QUESTIONNAIRE</button>
     </main>
     <footer>
         <img src="{% static 'feelback/images/footer.png' %}" alt="Footer FeelBack">
