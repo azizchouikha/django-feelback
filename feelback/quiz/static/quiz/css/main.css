@@ -2,24 +2,20 @@ body {
     font-family: 'Rajdhani', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    background-color: #ffffff;
     text-align: center;
 }
 
 header {
     background-color: #fff;
     padding: 10px 0; /* Réduit pour moins d'espacement autour de l'image */
-    border-bottom: 2px solid #cccccc;
+    
 }
 
-.header-image {
-    width: 50%; /* Ajuste cela pour contrôler la taille de l'image */
-    height: auto;
-}
-
-h1, p {
-    margin: 0;
-    padding: 5px 0;
+.logo-container {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
 }
 
 h2 {
@@ -32,6 +28,42 @@ p {
     font-size: 16px;
 }
 
+/* Change button color to grey */
+.button-grey {
+    background-color: #6c757d; /* Grey color */
+}
+
+.button-grey:hover {
+    background-color: #5a6268; /* Slightly darker grey on hover */
+}
+
+/* Align content to the left */
+main {
+    text-align: left;
+    padding-left: 20px; /* Adds padding to the left to space out the content */
+}
+
+h2 {
+    color: #333;
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+p {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.button-grey {
+    background-color: #6c757d !important; /* Ensure grey color is applied */
+    color: white;
+}
+
+.button-grey:hover {
+    background-color: #5a6268 !important; /* Ensure hover effect is applied */
+}
+
 .button, button {
     margin: 20px 0;
     padding: 10px 20px;
@@ -39,7 +71,6 @@ p {
     color: white;
     background-color: #007bff;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
     display: inline-block;
 }
@@ -48,13 +79,29 @@ p {
     background-color: #0056b3;
 }
 
+
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: #adaaaa; /* Background color */
+    color: #000000; /* Text color */
     text-align: center;
     padding: 10px;
     position: fixed;
     bottom: 0;
     width: 100%;
-    font-size: 0.8em;
+    font-size: 0.9em;
+    height: 100px;
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-content span {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 500;
 }

@@ -11,16 +11,26 @@
 </head>
 <body>
     <header>
-        <img src="{% static 'feelback/images/header.png' %}" alt="Logo FeelBack" class="header-image">
+        <div class="header-content">
+            <div class="logo-container">
+                <img src="{% static 'feelback/images/logo.png' %}" alt="Logo FeelBack" class="header-image">
+            </div>
+            <h2>FeelBack</h1>
+            <p>Le questionnaire de satisfaction</p>
+        </div>
     </header>
     <main>
+        <a href="{% url 'dashboard' %}" class="button button-grey">CONSULTER LE TABLEAU DE BORD</a>
         <h2>Bienvenue sur l'application FeelBack</h2>
         <p>Cette application vous permet d'évaluer la livraison de votre commande</p>
-        <a href="{% url 'dashboard' %}" class="button">CONSULTER LE TABLEAU DE BORD</a>
         <button onclick="location.href='{% url 'submitfeedback' %}'">CREER UNE COMMANDE FICTIVE ET REPONDRE AU QUESTIONNAIRE</button>
     </main>
+    
     <footer>
-        <img src="{% static 'feelback/images/footer.png' %}" alt="Footer FeelBack">
+        <div class="footer-content">
+            <span>© 2024 | FeelBack</span>
+        </div>
     </footer>
+    
 </body>
 </html>
