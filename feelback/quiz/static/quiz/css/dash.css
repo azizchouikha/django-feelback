@@ -2,19 +2,30 @@ body {
     font-family: 'Rajdhani', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    background-color: #ffffff;
     text-align: center;
 }
 
 header {
     background-color: #fff;
-    padding: 10px 0;
-    border-bottom: 2px solid #cccccc;
+    padding: 10px 0; /* Réduit pour moins d'espacement autour de l'image */
+    
 }
 
-.header-image {
-    width: 50%;
-    height: auto;
+.logo-container {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+}
+
+h2 {
+    color: #333;
+    font-size: 24px;
+}
+
+p {
+    color: #666;
+    font-size: 16px;
 }
 
 .back-link {

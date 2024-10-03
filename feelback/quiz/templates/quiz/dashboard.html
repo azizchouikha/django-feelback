@@ -6,12 +6,17 @@
     <meta charset="UTF-8">
     <title>Tableau de bord - FeelBack</title>
     <link rel="stylesheet" href="{% static 'quiz/css/dash.css' %}">
-    <link rel="stylesheet" href="{% static 'global.css' %}">
     <link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <img src="{% static 'feelback/images/header.png' %}" alt="Logo FeelBack" class="header-image">
+        <div class="header-content">
+            <div class="logo-container">
+                <img src="{% static 'feelback/images/logo.png' %}" alt="Logo FeelBack" class="header-image">
+            </div>
+            <h2>FeelBack</h1>
+            <p>Le questionnaire de satisfaction</p>
+        </div>
     </header>
     <main>
         <a href="{% url 'index' %}" class="back-link">Revenir sur la page d'accueil</a>
