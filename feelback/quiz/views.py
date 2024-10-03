@@ -1,8 +1,9 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.template import loader
-from .models import Answers, Questions, Title
+from .models import Answers, Questions, Title, Orders, Forms
 from django.db.models import Avg
+from django.utils import timezone
 
 
 def index(request):
@@ -10,13 +11,22 @@ def index(request):
     template = loader.get_template("quiz/index.html")
     return HttpResponse(template.render(context, request))
 
+
 def submitfeedback(request):
     if request.method == 'POST':
+
+        form_instance, created = Forms.objects.get_or_create(
+            defaults={'form_name': 'Default Form Name', 'created_at': timezone.now()}
+        )
+        
+        order_name = f"Order at {timezone.now().strftime('%Y-%m-%d %H:%M:%S')}"
+        order = Orders(order_name=order_name, form=form_instance)
+        order.save()
+
         questions = Questions.objects.all()
 
         for question in questions:
             answer_value = request.POST.get(f'question_{question.id}')
-
             if answer_value:  
                 answer = Answers(
                     value=int(answer_value),  
@@ -24,12 +34,11 @@ def submitfeedback(request):
                 )
                 answer.save()
 
-        return redirect('index')  
+        return redirect('index') 
     
     else:
         questions = Questions.objects.all()
         return render(request, 'quiz/feedbackform.html', {'questions': questions})
-
 
 def dashboard(request):
     titles = Title.objects.all()

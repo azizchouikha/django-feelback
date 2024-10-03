@@ -36,3 +36,8 @@ class Title(models.Model):
     def __str__(self):
         return self.title_name
 
+class Orders(models.Model):
+    order_name = models.CharField(max_length=255)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    form = models.ForeignKey(Forms, related_name='orders', on_delete=models.CASCADE)
