@@ -20,7 +20,6 @@
         <h2>Donner votre avis</h2>
         <form action="{{ feedbackurl }}" method="post">
             {% csrf_token %}
-            <!-- Boucler sur les questions récupérées de la base de données -->
             {% for question in questions %}
             <div class="question">
                 <label>{{ question.title }}</label>
