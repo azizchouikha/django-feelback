@@ -1,5 +1,4 @@
 /* Style global */
-
 body {
     font-family: 'Rajdhani', sans-serif;
     margin: 0;
@@ -12,32 +11,43 @@ body {
     justify-content: space-between;  
 }
 
-
-
+/* Header */
 header {
     background-image: url("{% static 'feelback/images/header.png' %}");  
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover; 
-    padding: 0.5px 0;  
+    padding: 80px 0;  /* Ajuster la hauteur du header */
     color: #000;  
-    flex-shrink: 0;  
+    display: flex;  /* Utiliser flexbox pour centrer le contenu */
+    flex-direction: column;
+    align-items: center;  /* Centrer horizontalement */
+    justify-content: center;  /* Centrer verticalement */
+}
+
+/* Logo du header */
+header img {
+    width: 250px;  /* Augmenter la taille du logo */
+    height: auto;
+    margin-bottom: 20px;  /* Ajouter un espace sous le logo */
 }
 
 h1 {
-    font-size: 2.5rem;  
-    margin: 10px 0; 
+    font-size: 2.8rem;  /* Augmenter légèrement la taille du titre */
+    margin: 0; 
 }
+
 p {
     font-size: 1.2rem;  
     margin-top: 5px;
-    color: #666;
+    color: #1a1717;
 }
 
+/* Bouton de retour à l'accueil */
 .back-button {
-    background-color: #4a4a4a;
+    background-color: #666;
     color: white;
-    padding: 15px;  
+    padding: 15px 30px;  /* Augmenter le padding pour un bouton plus grand */
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -46,26 +56,23 @@ p {
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 30px;
-    display: block;  
-    width: 100%;  
-    max-width: 300px;  
-    margin: 0 auto; 
+    display: inline-block;  
+    max-width: 400px;  /* Bouton plus large */
+    margin: 20px auto; /* Centrer le bouton */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
-
 
 .back-button:hover {
     background-color: #333; 
     transform: translateY(-2px); 
 }
 
-
-
+/* Section du tableau de bord */
 .dashboard {
     background-color: white;
-    padding: 15px; 
-    max-width: 700px; 
+    padding: 20px; 
+    max-width: 800px; 
     margin: 0 auto;
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -73,47 +80,72 @@ p {
 }
 
 .dashboard h2 {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     color: #333;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
-.dashboard p {
-    font-size: 0.9rem;
-    color: #0d0d0d;
-    margin-bottom: 20px;
-}
-
-.statistics {
+/* Section du tableau de bord */
+.dashboard {
+    background-color: white;
+    padding: 20px; 
+    max-width: 800px; 
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;  /* Les éléments internes s'organisent en colonne */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Conteneur pour les statistiques (boîte blanche qui contient les boîtes bleues) */
+.statistics {
+    background-color: white;  /* Couleur blanche pour la boîte conteneur */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;  /* Espacement égal entre les boîtes */
     flex-wrap: wrap;
+    width: 100%;  /* Prend toute la largeur du conteneur */
+    max-width: 750px;  /* Limite la largeur totale */
 }
 
+
+
+/* Style des boîtes bleues */
 .stat-box {
-    background-color: #0050FF;
-    color: rgb(36, 11, 11);
-    padding: 10px; 
+    background-color: #0050FF;  /* Couleur de fond bleue */
+    color: white;  /* Couleur du texte par défaut (blanc) */
+    padding: 20px;  /* Augmenter le padding pour des boîtes plus grandes */
     border-radius: 8px;
-    width: 120px;  
+    width: 18%;  /* Chaque boîte occupe environ 22% de la largeur du conteneur */
     text-align: center;
-    margin: 5px;  
+    margin: 10px 0;  /* Espacement vertical entre les boîtes */
 }
 
+/* Pour changer la couleur du texte dans les boîtes bleues */
 .stat-box .stat-value {
-    font-size: 1.3rem; 
+    font-size: 1.6rem;  /* Augmenter la taille des valeurs */
     font-weight: bold;
+    color: rgb(255, 255, 255);  /* Change la couleur du texte de la valeur */
 }
 
 .stat-box .stat-label {
     margin-top: 5px;
-    font-size: 0.9rem;  
+    font-size: 1rem;
+    color: rgb(245, 253, 245);  /* Change la couleur du texte de l'étiquette */
 }
+
+
+
+/* Footer */
 footer {
     background-color: #EAEAEA;
-    padding: 10px; 
+    padding: 20px; 
     color: #666;
     text-align: center;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     flex-shrink: 0;
 }
