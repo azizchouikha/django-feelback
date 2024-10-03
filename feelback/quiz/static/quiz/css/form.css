@@ -29,41 +29,42 @@ p {
 }
 main {
     width: 60%;
-    margin: 40px auto;
+    margin: 10px 30px;
     text-align: left;
 }
 
 .question {
     margin: 20px 0;
+    display: block; /* Force la question à occuper toute la largeur */
+}
+
+.question label {
+    display: block; /* Force le label (la question) à occuper une ligne entière */
+    margin-bottom: 10px; /* Espacement entre la question et les boutons radio */
+    font-weight: bold; /* Met en valeur la question */
 }
 
 input[type="radio"] {
     margin-right: 5px;
 }
 
-/* .button-grey {
-    background-color: #6c757d !important; 
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
+.radio-group {
+    display: flex;
+    gap: 10px; /* Espace entre chaque bouton radio */
 }
 
-.button-grey:hover {
-    background-color: #5a6268 !important; 
-} */
 
 .back-link {
-    color: #333;
-    background-color: #e0e0e0; /* Ajusté pour correspondre à l'image */
+    color: #ffffff;
+    background-color: #6c757d; /* Ajusté pour correspondre à l'image */
     text-decoration: none;
     padding: 10px 20px;
-    border-radius: 5px;
     display: inline-block;
     margin-bottom: 20px;
 }
 
 .back-link:hover {
-    background-color: #cccccc;
+    background-color:  #5a6268 ;
 }
 button, .button {
     background-color: #007bff;
@@ -84,7 +85,6 @@ footer {
     color: #000000; /* Text color */
     text-align: center;
     padding: 10px;
-    position: fixed;
     bottom: 0;
     width: 100%;
     font-size: 0.9em;

@@ -28,14 +28,17 @@
             {% for question in questions %}
             <div class="question">
                 <label>{{ question.title }}</label>
-                {% for i in "12345" %}
-                <input type="radio" name="question_{{ question.id }}" value="{{ i }}">{{ i }}
-                {% endfor %}
+                <div class="radio-group">
+                    {% for i in "12345" %}
+                    <input type="radio" name="question_{{ question.id }}" value="{{ i }}">{{ i }}
+                    {% endfor %}
+                </div>
             </div>
             {% endfor %}
             <button type="submit">Envoyer</button>
         </form>
     </main>
+    
 
     <footer>
         <div class="footer-content">

@@ -83,7 +83,7 @@ footer {
     color: #000000; /* Text color */
     text-align: center;
     padding: 10px;
-    position: fixed;
+    margin-top: 80px;
     bottom: 0;
     width: 100%;
     font-size: 0.9em;
