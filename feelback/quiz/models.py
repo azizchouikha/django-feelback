@@ -27,14 +27,14 @@ class Answers(models.Model):
 
     def __str__(self):
         return f"Answer {self.id} for question {self.question.id}"
-    
-from django.db import models
 
 class Title(models.Model):
     title_name = models.CharField(max_length=255)
+    question = models.ForeignKey(Questions, related_name='titles', on_delete=models.CASCADE, null=True, blank=True)
 
     def __str__(self):
         return self.title_name
+
 
 class Orders(models.Model):
     order_name = models.CharField(max_length=255)
