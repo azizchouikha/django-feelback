@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.template import loader
 from .models import Answers, Questions, Title
-from django.db.models import Avg, Count
+from django.db.models import Avg
 
 
 def index(request):
