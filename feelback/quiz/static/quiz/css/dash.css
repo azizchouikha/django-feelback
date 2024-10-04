@@ -8,7 +8,7 @@ body {
 
 header {
     background-color: #fff;
-    padding: 10px 0; /* Réduit pour moins d'espacement autour de l'image */
+    padding: 10px 0;
     
 }
 
@@ -30,13 +30,13 @@ p {
 }
 main {
     width: 60%;
-    margin: 20px auto; /* Centre le conteneur avec un espacement autour */
-    text-align: left; /* Aligne le texte à gauche */
+    margin: 20px auto; 
+    text-align: left; 
 }
 
 .back-link {
     color: #ffffff;
-    background-color: #6c757d; /* Ajusté pour correspondre à l'image */
+    background-color: #6c757d;
     text-decoration: none;
     padding: 10px 20px;
     display: inline-block;
@@ -53,13 +53,16 @@ main {
     margin: 20px;
 }
 
+
 .stat {
-    background-color: #0003cd; /* Vérifiez la correspondance de couleur */
+    background-color: #0003cd;
     color: white;
-    padding: 40px;
-    width: 15%; /* Ajustement pour l'alignement */
-    height: 120px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ajout de l'ombre pour la profondeur */
+    padding: 40px; 
+    flex-grow: 1; 
+    margin: 10px; 
+    text-align: center; 
+    width: 15%; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
 }
 
 .stat .number {
@@ -71,8 +74,8 @@ main {
 }
 
 footer {
-    background-color: #adaaaa; /* Background color */
-    color: #000000; /* Text color */
+    background-color: #adaaaa; 
+    color: #000000; 
     text-align: center;
     padding: 10px;
     bottom: 0;
@@ -80,8 +83,8 @@ footer {
     font-size: 0.9em;
     height: 100px;
     display: flex;
-    justify-content: center; /* Centre horizontalement */
-    align-items: center; /* Centre verticalement */
+    justify-content: center; 
+    align-items: center; 
 }
 
 .footer-content {

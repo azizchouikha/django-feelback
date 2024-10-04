@@ -8,7 +8,7 @@ body {
 
 header {
     background-color: #fff;
-    padding: 10px 0; /* Réduit pour moins d'espacement autour de l'image */
+    padding: 10px 0; 
     
 }
 
@@ -35,10 +35,10 @@ p {
 input[type="radio"] {
     margin-right: 5px;
 }
-/* Align content to the left */
+
 main {
     text-align: left;
-    padding-left: 20px; /* Adds padding to the left to space out the content */
+    padding-left: 20px; 
 }
 
 h2 {
@@ -54,12 +54,12 @@ p {
 }
 
 .button-grey {
-    background-color: #6c757d !important; /* Ensure grey color is applied */
+    background-color: #6c757d !important; 
     color: white;
 }
 
 .button-grey:hover {
-    background-color: #5a6268 !important; /* Ensure hover effect is applied */
+    background-color: #5a6268 !important; 
 }
 
 .button, button {
@@ -79,8 +79,8 @@ p {
 
 
 footer {
-    background-color: #adaaaa; /* Background color */
-    color: #000000; /* Text color */
+    background-color: #adaaaa; 
+    color: #000000; 
     text-align: center;
     padding: 10px;
     margin-top: 80px;
@@ -89,8 +89,8 @@ footer {
     font-size: 0.9em;
     height: 100px;
     display: flex;
-    justify-content: center; /* Centre horizontalement */
-    align-items: center; /* Centre verticalement */
+    justify-content: center; 
+    align-items: center; 
 }
 
 .footer-content {

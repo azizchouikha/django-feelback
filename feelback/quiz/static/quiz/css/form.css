@@ -8,7 +8,7 @@ body {
 
 header {
     background-color: #fff;
-    padding: 10px 0; /* Réduit pour moins d'espacement autour de l'image */
+    padding: 10px 0; 
     
 }
 
@@ -35,13 +35,13 @@ main {
 
 .question {
     margin: 20px 0;
-    display: block; /* Force la question à occuper toute la largeur */
+    display: block; 
 }
 
 .question label {
-    display: block; /* Force le label (la question) à occuper une ligne entière */
-    margin-bottom: 10px; /* Espacement entre la question et les boutons radio */
-    font-weight: bold; /* Met en valeur la question */
+    display: block; 
+    margin-bottom: 10px; 
+    font-weight: bold; 
 }
 
 input[type="radio"] {
@@ -50,13 +50,13 @@ input[type="radio"] {
 
 .radio-group {
     display: flex;
-    gap: 10px; /* Espace entre chaque bouton radio */
+    gap: 10px;
 }
 
 
 .back-link {
     color: #ffffff;
-    background-color: #6c757d; /* Ajusté pour correspondre à l'image */
+    background-color: #6c757d; 
     text-decoration: none;
     padding: 10px 20px;
     display: inline-block;
@@ -81,8 +81,8 @@ button:hover {
 }
 
 footer {
-    background-color: #adaaaa; /* Background color */
-    color: #000000; /* Text color */
+    background-color: #adaaaa; 
+    color: #000000; 
     text-align: center;
     padding: 10px;
     bottom: 0;
@@ -90,8 +90,8 @@ footer {
     font-size: 0.9em;
     height: 100px;
     display: flex;
-    justify-content: center; /* Centre horizontalement */
-    align-items: center; /* Centre verticalement */
+    justify-content: center; 
+    align-items: center; 
 }
 
 .footer-content {
