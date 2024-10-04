@@ -2,33 +2,49 @@ body {
     font-family: 'Rajdhani', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    background-color: #ffffff;
     text-align: center;
 }
 
 header {
     background-color: #fff;
-    padding: 10px 0;
-    border-bottom: 2px solid #cccccc;
+    padding: 10px 0; /* Réduit pour moins d'espacement autour de l'image */
+    
 }
 
-.header-image {
-    width: 50%;
-    height: auto;
+.logo-container {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+}
+
+h2 {
+    color: #333;
+    font-size: 24px;
+}
+
+p {
+    color: #333;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+main {
+    width: 60%;
+    margin: 20px auto; /* Centre le conteneur avec un espacement autour */
+    text-align: left; /* Aligne le texte à gauche */
 }
 
 .back-link {
-    color: #333;
-    background-color: #e0e0e0; /* Ajusté pour correspondre à l'image */
+    color: #ffffff;
+    background-color: #6c757d; /* Ajusté pour correspondre à l'image */
     text-decoration: none;
     padding: 10px 20px;
-    border-radius: 5px;
     display: inline-block;
     margin-bottom: 20px;
 }
 
 .back-link:hover {
-    background-color: #cccccc;
+    background-color:  #5a6268 ;
 }
 
 .statistics {
@@ -38,10 +54,11 @@ header {
 }
 
 .stat {
-    background-color: #007bff; /* Vérifiez la correspondance de couleur */
+    background-color: #0003cd; /* Vérifiez la correspondance de couleur */
     color: white;
-    padding: 20px;
-    width: 22%; /* Ajustement pour l'alignement */
+    padding: 40px;
+    width: 15%; /* Ajustement pour l'alignement */
+    height: 120px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ajout de l'ombre pour la profondeur */
 }
 
@@ -54,12 +71,26 @@ header {
 }
 
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: #adaaaa; /* Background color */
+    color: #000000; /* Text color */
     text-align: center;
     padding: 10px;
-    position: fixed;
     bottom: 0;
     width: 100%;
-    font-size: 0.8em;
+    font-size: 0.9em;
+    height: 100px;
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-content span {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 500;
 }

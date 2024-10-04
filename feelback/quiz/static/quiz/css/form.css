@@ -2,60 +2,77 @@ body {
     font-family: 'Rajdhani', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    background-color: #ffffff;
     text-align: center;
 }
 
 header {
     background-color: #fff;
     padding: 10px 0; /* Réduit pour moins d'espacement autour de l'image */
-    border-bottom: 2px solid #cccccc;
+    
 }
 
-.header-image {
-    width: 50%; /* Ajuste cela pour contrôler la taille de l'image */
-    height: auto;
-}
-
-.container {
-    background-color: white;
-    width: 60%;
-    margin: 40px auto;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.back-link {
-    color: #333;
-    background-color: #e0e0e0; /* Ajusté pour correspondre à l'image */
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+.logo-container {
     display: inline-block;
-    margin-bottom: 20px;
+    width: 100px;
+    height: 100px;
 }
 
-.back-link:hover {
-    background-color: #cccccc;
+h2 {
+    color: #333;
+    font-size: 24px;
+}
+
+p {
+    color: #666;
+    font-size: 16px;
+}
+main {
+    width: 60%;
+    margin: 10px 30px;
+    text-align: left;
 }
 
 .question {
     margin: 20px 0;
+    display: block; /* Force la question à occuper toute la largeur */
+}
+
+.question label {
+    display: block; /* Force le label (la question) à occuper une ligne entière */
+    margin-bottom: 10px; /* Espacement entre la question et les boutons radio */
+    font-weight: bold; /* Met en valeur la question */
 }
 
 input[type="radio"] {
     margin-right: 5px;
 }
 
+.radio-group {
+    display: flex;
+    gap: 10px; /* Espace entre chaque bouton radio */
+}
+
+
+.back-link {
+    color: #ffffff;
+    background-color: #6c757d; /* Ajusté pour correspondre à l'image */
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.back-link:hover {
+    background-color:  #5a6268 ;
+}
 button, .button {
     background-color: #007bff;
     color: white;
     border: none;
     padding: 10px 20px;
-    border-radius: 5px;
+
     cursor: pointer;
-    display: block;
     margin: 20px auto;
 }
 
@@ -64,12 +81,27 @@ button:hover {
 }
 
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: #adaaaa; /* Background color */
+    color: #000000; /* Text color */
     text-align: center;
     padding: 10px;
-    position: fixed;
     bottom: 0;
     width: 100%;
-    font-size: 0.8em;
+    font-size: 0.9em;
+    height: 100px;
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
 }
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-content span {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 500;
+}
+
